@@ -106,6 +106,7 @@ Surprisingly, our findings indicate that the LSTM model performed remarkably wel
 
 The pretrained Transformer model, while undoubtedly powerful and capable of capturing intricate details, did not exhibit a substantial performance advantage in our specific task. This observation underscores the importance of task-specific evaluations and the nuanced nature of model comparisons. Our results encourage further exploration into the effectiveness of traditional recurrent architectures like LSTMs, particularly in scenarios where pretrained models might not necessarily outperform their sequential counterparts.
 
+### Conclusion
 This LSTM-based sequence-to-sequence model serves as a powerful tool for English-to-Hindi language translation. The detailed architecture, training configuration, and evaluation metrics establish a foundation for further experimentation and improvements.
 
 Our work shows that for a small sample of 100 test sentences the BLEU score was 0.8 for Transformers and 0.89 for LSTMs which indicates a good start and is comparable with that of google translate. 
