@@ -87,7 +87,7 @@ Our work shows that for a small sample of 100 test sentences the BLEU score was 
 Our aim with this project is to take this further with training bidirectionally for hindi and english. We look towards improving our accuracy, working with transformers and achieving a consistent state in order to work with more data. We also look towards expanding this project to include a third language where the model understands the introduction of the third language and is able to translate from hindi to the third language using english as the middleware decoder. In order to achieve this, we are building confidence on translating from hindi to english with an accuracy of 95% or higher.
 
 ### References
-https://medium.com/geekculture/english-to-hindi-text-translation-using-marianmt-models-from-huggingface-187b4719809e
-https://towardsdatascience.com/neural-machine-translation-15ecf6b0b
-https://huggingface.co/datasets/cfilt/iitb-english-hindi
-https://huggingface.co/damerajee/hindi-english
+- https://medium.com/geekculture/english-to-hindi-text-translation-using-marianmt-models-from-huggingface-187b4719809e
+- https://towardsdatascience.com/neural-machine-translation-15ecf6b0b
+- https://huggingface.co/datasets/cfilt/iitb-english-hindi
+- https://huggingface.co/damerajee/hindi-english
