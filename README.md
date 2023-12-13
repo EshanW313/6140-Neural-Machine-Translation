@@ -104,3 +104,7 @@ Our aim with this project is to take this further with training bidirectionally 
 - https://huggingface.co/datasets/cfilt/iitb-english-hindi
 
 - https://huggingface.co/damerajee/hindi-english
+- https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer
+- https://www.tensorflow.org/api_docs/python/tf/keras/utils/pad_sequences
+- https://www.tensorflow.org/api_docs/python/tf/keras/losses/SparseCategoricalCrossentropy
+- https://keras.io/api/layers/core_layers/dense/
