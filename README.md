@@ -112,7 +112,7 @@ This LSTM-based sequence-to-sequence model serves as a powerful tool for English
 Our work shows that for a small sample of 100 test sentences the BLEU score was 0.8 for Transformers and 0.89 for LSTMs which indicates a good start and is comparable with that of google translate. 
 
 ### Future Work
-Our aim with this project is to take this further with training bidirectionally for hindi and english. We look towards improving our accuracy, working with transformers and achieving a consistent state in order to work with more data. We also look towards expanding this project to include a third language where the model understands the introduction of the third language and is able to translate from hindi to the third language using english as the middleware decoder. In order to achieve this, we are building confidence on translating from hindi to english with an accuracy of 95% or higher.
+Our aim with this project is to take this further, training bidirectionally for hindi and english. We look towards improving our accuracy, working with transformers and achieving a consistent state in order to work with more data. We also look towards expanding this project to include a third language where the model understands the introduction of the third language and is able to translate from hindi to the third language using english as the middleware decoder. In order to achieve this, we are building confidence on translating from hindi to english with an accuracy of 95% or higher.
 
 ### References
 - https://medium.com/geekculture/english-to-hindi-text-translation-using-marianmt-models-from-huggingface-187b4719809e
