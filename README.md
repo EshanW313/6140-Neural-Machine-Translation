@@ -1,13 +1,13 @@
 # 6140-Neural-Machine-Translation
 
-Neural Machine Translation model for bi-lingual conversation using LSTM and Transformers
+## Neural Machine Translation model for bi-lingual conversation using LSTM and Transformers
 
-### Contributors - Eshan Wadhwa, Prabhleenkaur Bindra
+#### Contributors - Eshan Wadhwa, Prabhleenkaur Bindra
 
-## Introduction/Inspiration
+### Introduction/Inspiration
 Natural language processing (NLP) has got great development with deep learning techniques. In the sub-field of machine translation, a new approach named Neural Machine Translation (NMT) has emerged and gotten massive attention from both academia and industry. Our aim with the project has been to understand the working of various machine learning algorithms (esp Neural Networks), their architecture and impact on accuracy for translating data from one language to another. We worked with LSTM(Long Short Term Memory) RNNs and Transformers with attention. Our focus majorly has been with LSTMs due to their short training time, while we worked around working with Transformers to understand their impact on machine translation. Per our initial analysis, we realized that Transformers in general take a lot of time to train and learn while providing better accuracy while working towards machine translation, where attention is the key. This state-of-the-art algorithm is an application of deep learning in which massive datasets of translated sentences are used to train a model capable of translating between any two languages. One of the older and more established versions of NMT is the Encoder Decoder structure. This basically is two RNN models, one which encodes the source language while the other decoding the tokens(encoded vectors) to the respective target language. When coupled with the power of attention mechanisms, this architecture can achieve impressive results as we discuss through this project.
 
-## Environment Setup
+### Environment Setup
 The basic libraries and dependencies require to set the project up include:
 
 
@@ -19,8 +19,8 @@ Matplotlib - to chart and plot results
 Tensorflow - in order to convert our raw data into tensors for tokenizing later.
 Transformers - to load and check transformer pre-trained model(Helsinki-NLP/opus-mt-en-hi)
 
-## Prepare datasets - 
-### Preprocessing
+### Prepare datasets - 
+#### Preprocessing
 Major of our project involved understanding, preprocessing and tokenizing our dataset. The initial raw dataset that we used was from Hugging face (https://huggingface.co/datasets/cfilt/iitb-english-hindi) comprising 1.66 mn training records and 2.51K test records. 
 
 
@@ -29,7 +29,7 @@ We preprocess, remove extra punctuations, strip data and remove foreign words fr
 
 Our aim was to extract sentences with length 10 understanding the complexity of data and managing the training of the dataset. We thus first filtered our data upon this metric. Post this we added the <START> and <END> token for each of the sentences. If the sentence length after adding these tokens was <10, we added padding at the end of each of these sentences.
 
-### Creating the vocabulary
+#### Creating the vocabulary
 
 To create a comprehensive vocabulary from our filtered dataset, we utilize a Tokenizer library. This tool breaks down the text into tokens and assigns unique numerical identifiers to each token, forming the vocabulary. Following vocabulary creation, we proceed to convert text sequences into numerical representations using tokenization.
 
@@ -41,7 +41,7 @@ In summary, by incorporating padding at the end of sentences, we not only establ
 
 Finally after preprocessing is complete we split our dataset into training and test with 95% of the preprocessed data being used for training while 5% is used for testing and calculating BLEU score.
 
-## Loading the model
+### Loading the model
 We designed a Long Short-Term Memory (LSTM) model for sequence-to-sequence translation tasks, focusing on language translation from English to Hindi. The model architecture comprises an encoder-decoder structure, a widely used paradigm for handling sequential data.
 
 The encoder processes the input sequences (English sentences) and extracts meaningful representations. Key components of the encoder include:
@@ -58,7 +58,7 @@ A Dense layer with a softmax activation function is employed to produce probabil
 
 The model is compiled using the Adam optimizer and Sparse Categorical Cross Entropy as the loss function. The choice of the optimizer and loss function is motivated by their effectiveness in sequence-to-sequence tasks. The model is configured to optimize for accuracy during training.
 
-## Training the model
+### Training the model
 Below describes our model’s training and validation sets accuracy vs loss curves over 30 epochs:
 
 ![Training Accuracy vs Loss](lstm-hi-en-1-loss-acc.png)
@@ -81,10 +81,10 @@ This LSTM-based sequence-to-sequence model serves as a powerful tool for English
 
 Our work shows that for a small sample of 100 test sentences the BLEU score was 0.8 for Transformers and 0.89 for LSTMs which indicates a good start and is comparable with that of google translate. 
 
-## Future Work
+### Future Work
 Our aim with this project is to take this further with training bidirectionally for hindi and english. We look towards improving our accuracy, working with transformers and achieving a consistent state in order to work with more data. We also look towards expanding this project to include a third language where the model understands the introduction of the third language and is able to translate from hindi to the third language using english as the middleware decoder. In order to achieve this, we are building confidence on translating from hindi to english with an accuracy of 95% or higher.
 
-## References
+### References
 https://medium.com/geekculture/english-to-hindi-text-translation-using-marianmt-models-from-huggingface-187b4719809e
 https://towardsdatascience.com/neural-machine-translation-15ecf6b0b
 https://huggingface.co/datasets/cfilt/iitb-english-hindi
