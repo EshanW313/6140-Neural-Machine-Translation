@@ -60,6 +60,8 @@ A Dense layer with a softmax activation function is employed to produce probabil
 
 The model is compiled using the Adam optimizer and Sparse Categorical Cross Entropy as the loss function. The choice of the optimizer and loss function is motivated by their effectiveness in sequence-to-sequence tasks. The model is configured to optimize for accuracy during training.
 
+![Model Architecture](model architecture.png)
+
 ### Training the model
 Below describes our model’s training and validation sets accuracy vs loss curves over 30 epochs:
 
