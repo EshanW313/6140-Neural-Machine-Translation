@@ -98,6 +98,7 @@ We observe that in over 30 epochs we receive an accuracy of around 91% while the
 The notebook also has experimental results of training and validation accuracy vs loss for 20, and 50 epochs respectively with varying amounts of training set size for us to analyze and conclude the BLEU scores.
 
 #### Steps to run
+	- Since the saved models are over 100 mb, github is not allowing us to directly upload these models. Please unzip the model folders in saved LSTM model.zip
 	- Load the preprocessed data
 	- Load the model for LSTM 
 	- Set up encoder and decoders for testing the model
