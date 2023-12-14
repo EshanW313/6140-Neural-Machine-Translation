@@ -119,8 +119,6 @@ This LSTM-based sequence-to-sequence model serves as a powerful tool for English
 
 BLEU score for Transformers (Baseline)- 0.13276982988333147
 
-| Use-case Name| Test case Name |
-
 
 |   Epochs   |   Train size|   BLEU Score   |
 |------------|-------------|----------------|
