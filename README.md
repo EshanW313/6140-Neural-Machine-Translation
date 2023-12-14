@@ -29,13 +29,14 @@ Key components include embedding layers for token representation, LSTM layers fo
 
 ### Environment Setup
 The basic libraries and dependencies require to set the project up include:
-- nltk - for tokenizing and calculating bleu score
-- keras - to set and train LSTM model
-- datasets (to load datasets from Hugging Face) - To load and use dataset and pretrained model from hugging face
-- Numpy, pandas, re and string for data preprocessing
-- Matplotlib - to chart and plot results
-- Tensorflow - in order to convert our raw data into tensors for tokenizing later.
-- Transformers - to load and check transformer pre-trained model(Helsinki-NLP/opus-mt-en-hi)
+
+	- nltk - for tokenizing and calculating bleu score
+	- keras - to set and train LSTM model
+	- datasets (to load datasets from Hugging Face) - To load and use dataset and pretrained model from hugging face
+	- numpy, pandas, re and string for data preprocessing
+	- Matplotlib - to chart and plot results
+	- Tensorflow - in order to convert our raw data into tensors for tokenizing later.
+	- Transformers - to load and check transformer pre-trained model(Helsinki-NLP/opus-mt-en-hi)
 
 ### Prepare datasets
 
