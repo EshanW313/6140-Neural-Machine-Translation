@@ -98,7 +98,7 @@ For model with 50k records and 50 epochs, below were our results:
 ![Training Accuracy vs Loss](lstm-en-hi-4-loss-acc.png)
 ![Validation Accuracy vs Loss](lstm-en-hi-4-val-loss-acc.png)
 
-We observe that in over 30 epochs we receive an accuracy of around 91% while the epoch loss also considerably reduces using LSTMs.
+We observe that we receive an accuracy of around 91% while the epoch loss also considerably reduces using LSTMs.
 	
 The notebook also has experimental results of training and validation accuracy vs loss for 20, and 50 epochs respectively with varying amounts of training set size for us to analyze and conclude the BLEU scores.
 
