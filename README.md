@@ -96,8 +96,16 @@ Below describes our model’s training and validation sets accuracy vs loss curv
 We observe that in over 30 epochs we receive an accuracy of around 91% while the epoch loss also considerably reduces using LSTMs.
 	
 The notebook also has experimental results of training and validation accuracy vs loss for 20, and 50 epochs respectively with varying amounts of training set size for us to analyze and conclude the BLEU scores.
-Model Comparison and Analysis 
-LSTM vs. Pretrained Transformer
+
+#### Steps to run
+	- Load the preprocessed data
+	- Load the model for LSTM 
+	- Set up encoder and decoders for testing the model
+	- Predict texts
+	- Calculate and print BLEU scores in order to verify accuracy
+	- You can also provide your own input and check the translated output.
+
+#### Model Comparison and Analysis LSTM vs. Pretrained Transformer
 To benchmark the performance of our LSTM-based sequence-to-sequence model, we conducted a comparative analysis with a pretrained Transformer model(Helsinki-NLP/opus-mt-en-hi) obtained from Hugging Face, specifically trained on the Opus dataset. Given the nature of the Transformer architecture, which excels in capturing long-range dependencies through attention mechanisms, we anticipated superior results.
 
 The BLEU (Bilingual Evaluation Understudy) score is a metric commonly used to evaluate the quality of machine-generated translations in Natural Language Processing (NLP), particularly in the context of Neural Machine Translation (NMT). BLEU was designed to align with human intuition about translation quality and has become a standard metric for comparing the performance of different translation models. BLEU evaluates the precision of the generated translation by comparing it to one or more reference translations. It considers n-grams (contiguous sequences of n items, typically words) in the generated translation and checks how many of these n-grams are also present in the reference translation.
@@ -107,9 +115,12 @@ Surprisingly, our findings indicate that the LSTM model performed remarkably wel
 The pretrained Transformer model, while undoubtedly powerful and capable of capturing intricate details, did not exhibit a substantial performance advantage in our specific task. This observation underscores the importance of task-specific evaluations and the nuanced nature of model comparisons. Our results encourage further exploration into the effectiveness of traditional recurrent architectures like LSTMs, particularly in scenarios where pretrained models might not necessarily outperform their sequential counterparts.
 
 ### Conclusion
+Conclusion
+
 This LSTM-based sequence-to-sequence model serves as a powerful tool for English-to-Hindi language translation. The detailed architecture, training configuration, and evaluation metrics establish a foundation for further experimentation and improvements.
 
-Our work shows that for a small sample of 100 test sentences the BLEU score was 0.8 for Transformers and 0.89 for LSTMs which indicates a good start and is comparable with that of google translate. 
+Our work shows that for a small sample of 100 test sentences the BLEU score was 0.049 for LSTMs and 0.13 for Transformers which indicates a good start. It also indicates the outperformance of Transformers, the reason for its recent hype and the future of machine translation with Transformers.
+
 
 ### Future Work
 Our aim with this project is to take this further, training bidirectionally for hindi and english. We look towards improving our accuracy, working with transformers and achieving a consistent state in order to work with more data. We also look towards expanding this project to include a third language where the model understands the introduction of the third language and is able to translate from hindi to the third language using english as the middleware decoder. In order to achieve this, we are building confidence on translating from hindi to english with an accuracy of 95% or higher.
