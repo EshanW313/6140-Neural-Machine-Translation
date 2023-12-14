@@ -88,10 +88,15 @@ The model is compiled using the Adam optimizer and Sparse Categorical Cross Entr
 ![Model Architecture](model-architecture.png)
 
 ### Training the model
-Below describes our model’s training and validation sets accuracy vs loss curves over 30 epochs:
+Below describes our model’s training and validation sets accuracy vs loss curves over 20 epochs for model with 250k data records:
 
-![Training Accuracy vs Loss](lstm-hi-en-1-loss-acc.png)
-![Validation Accuracy vs Loss](lstm-hi-en-1-val-loss-acc.png)
+![Training Accuracy vs Loss](lstm-hi-en-5-loss-acc.png)
+![Validation Accuracy vs Loss](lstm-hi-en-5-val-loss-acc.png)
+
+For model with 50k records and 50 epochs, below were our results:
+
+![Training Accuracy vs Loss](lstm-hi-en-4-loss-acc.png)
+![Validation Accuracy vs Loss](lstm-hi-en-4-val-loss-acc.png)
 
 We observe that in over 30 epochs we receive an accuracy of around 91% while the epoch loss also considerably reduces using LSTMs.
 	
