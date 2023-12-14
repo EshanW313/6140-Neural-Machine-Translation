@@ -46,13 +46,11 @@ Based on the raw data we received, we ran a basic statistical model to analyse a
 ![Data statistics](data-statistics.png)
 
 #### Preprocessing
-Major of our project involved understanding, preprocessing and tokenizing our dataset. The initial raw dataset that we used was from Hugging face (https://huggingface.co/datasets/cfilt/iitb-english-hindi) comprising 1.66 mn training records and 2.51K test records. 
+Majority of our project involved understanding, preprocessing and tokenizing our dataset. The initial raw dataset that we used was from Hugging face (https://huggingface.co/datasets/cfilt/iitb-english-hindi) comprising of 1.66 mn training records and 2.51K test records. 
 
+We preprocessed, removed extra punctuations, stripped data, and removed foreign words from our language model. Our raw data is structured as a dictionary which we extracted into lists termed eng_sen (english sentence) and hin_sen (hindi sentence) for the ease of our reference.
 
-We preprocess, remove extra punctuations, strip data and remove foreign words from our language model. Our raw data is extracted as a dictionary which we extract into lists termed eng_sen (english sentence) and hin_sen (hindi sentence) for ease of reference.
-
-
-Our aim was to extract sentences with length 10 understanding the complexity of data and managing the training of the dataset. We thus first filtered our data upon this metric. Post this we added the <START> and <END> token for each of the sentences. If the sentence length after adding these tokens was <10, we added padding at the end of each of these sentences.
+Our aim was to extract sentences with length 10 understanding the complexity of data and managing the training of the dataset. We thus first filtered our data upon this metric. Post this we added the <START> and <END> token for each of the sentences. If the sentence length after adding these tokens was greater than 10, we added padding at the end of each of these sentences.
 
 #### Creating the vocabulary
 
@@ -66,7 +64,7 @@ In summary, by incorporating padding at the end of sentences, we not only establ
 
 Finally after preprocessing is complete we split our dataset into training and test with 95% of the preprocessed data being used for training while 5% is used for testing and calculating BLEU score.
 
-### Loading the model
+### Creating the model
 We designed a Long Short-Term Memory (LSTM) model for sequence-to-sequence translation tasks, focusing on language translation from English to Hindi. The model architecture comprises an encoder-decoder structure, a widely used paradigm for handling sequential data.
 
 The encoder processes the input sequences (English sentences) and extracts meaningful representations. Key components of the encoder include:
